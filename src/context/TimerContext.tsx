@@ -1,12 +1,15 @@
-// TimeContext.tsx
 'use client'
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 const TimeContext = createContext<number>(0);
 
 export const useTime = () => useContext(TimeContext);
 
-export const TimeProvider: React.FC = ({ children }) => {
+interface TimeProviderProps {
+    children: ReactNode;
+}
+
+export const TimeProvider: React.FC<TimeProviderProps> = ({ children }) => {
     const [time, setTime] = useState<number>(0);
 
     useEffect(() => {
