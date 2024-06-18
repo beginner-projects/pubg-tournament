@@ -65,7 +65,7 @@ const TournamentCard: React.FC = () => {
 
     return (
         <div className='flex-col justify-center items-center mt-11'>
-            <Image src="./gun.svg" alt="Trophy" width={350} height={100} />
+            <Image src="./trophy.svg" alt="Trophy" width={350} height={100} />
             <div>
                 <span className='text-white flex justify-center text-xl'>Match starts in:</span>
                 <strong className='flex justify-center text-white text-2xl'>{formatTime(time)}</strong>
